@@ -10,7 +10,7 @@ namespace ATM.Controllers
     {
         public ActionResult Index()
         {
-            return View("About");
+            return View();
         }
 
         public ActionResult About()
@@ -22,7 +22,15 @@ namespace ATM.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Having Trouble?, Send us a message..."; 
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(string message)
+        {
+            ViewBag.Message = "Thanks we got your message"; 
 
             return View();
         }
