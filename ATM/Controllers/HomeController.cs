@@ -26,5 +26,17 @@ namespace ATM.Controllers
 
             return View();
         }
+
+        public ActionResult Serial(string letterCase)
+        {
+            var serial = "ASPNETMVC6ATM1";
+
+            if (letterCase == "lower")
+            {
+                return Content(serial.ToLower());
+
+            }
+            return Content(serial);
+        }
     }
 }
