@@ -11,7 +11,7 @@ namespace ATM.Models
         public int Id { get; set; }
 
         [Required]
-        [RegularExpression(@"\d{6,10}")]
+        [RegularExpression(@"\d{6,10}", ErrorMessage="Account # must be between 6 and 10 digits.")]
         [Display(Name= "Account #")]
         public string AccountNumber { get; set; }
 
